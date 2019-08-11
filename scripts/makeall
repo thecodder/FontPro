@@ -4,7 +4,7 @@ ffamily=$1
 shift
 
 case $ffamily in
-    "MinionPro" | "MyriadPro" | "CronosPro")
+    "MinionPro" | "MyriadPro" | "CronosPro" | HelveticaLTStd )
 	echo "Chosen font family is $ffamily"
 	echo "$ffamily" > fontname
 	;;
