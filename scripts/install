@@ -10,15 +10,6 @@ then
   dir="$(kpsewhich -expand-var='$TEXMFLOCAL')"
 fi
 
-while true; do
-    read -p "Do you wish to install the font files into $dir? (y/n) " yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
 # new directory layout (TDS v1.1)
 enc_dir="$dir/fonts/enc/dvips/$font"
 map_dir="$dir/fonts/map/dvips/$font"
@@ -27,15 +18,6 @@ tfm_dir="$dir/fonts/tfm/$vendor/$font"
 vf_dir="$dir/fonts/vf/$vendor/$font"
 tex_dir="$dir/tex/latex/$font"
 doc_dir="$dir/doc/latex/$font"
-#  # old directory layout
-#  enc_dir="$dir/dvips/$font"
-#  map_dir="$dir/dvips/$font"
-#  pfb_dir="$dir/fonts/type1/$vendor/$font"
-#  tfm_dir="$dir/fonts/tfm/$vendor/$font"
-#  vf_dir="$dir/fonts/vf/$vendor/$font"
-#  tex_dir="$dir/tex/latex/$font"
-#  doc_dir="$dir/doc/latex/$font"
-
 
 mkdir -p "$enc_dir" "$map_dir" "$pfb_dir" "$tfm_dir" "$vf_dir" "$tex_dir" "$doc_dir"
 
