@@ -62,11 +62,11 @@ fi
 verbose=false
 create_greek=true
 create_cyrillic=true
-create_vietnamese=true
+create_vietnamese=false
 create_expanded=false
 create_kerned=true
 create_smallcaps=true
-create_sc_grekcyrl=false
+create_sc_grekcyrl=true
 create_swash=true
 wide_spacing=false
 lig_flags="-fliga"
