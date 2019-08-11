@@ -111,5 +111,5 @@ if $math; then
     (cd fontinst; ../scripts/makeint $ffamily; ../scripts/makeoml $ffamily)
 fi
 
-(cd tex; latex $ffamily.ins; latex otfontdef.ins)
+(cd tex; latex -interaction=nonstopmode $ffamily.ins; latex -interaction=nonstopmode otfontdef.ins)
 
